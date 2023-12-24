@@ -18,12 +18,9 @@ btn.addEventListener('click', function (e) {
     title: title.value,
     text: txt.value
   }
-  // obj convert into array
-  let arr = Array.from(myObj);
-  // Order array
-  arr.sort();
-  notesObj.push(arr);
-  console.log(arr)
+  
+  notesObj.push(myObj);
+  
   // Push the text into localstorage
   localStorage.setItem('tit', JSON.stringify(notesObj));
   // We click the ADD-button the text will be [blank].
